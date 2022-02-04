@@ -1055,9 +1055,9 @@ describe Spree::Variant, type: :model do
     subject { variant.update(price: 50) }
 
     it 'updated_at changes when updating price' do
-      previous_updated_at = variant.updated_at
+      previous_updated_at = variant.updated_at.to_i
       subject
-      expect(variant.reload.updated_at).not_to eq(previous_updated_at)
+      expect(variant.reload.updated_at.to_i).not_to eq(previous_updated_at)
     end
 
     context 'cache is updated' do

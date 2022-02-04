@@ -74,8 +74,7 @@ module Spree
     end
 
     def touch_variant
-      puts 'It gets to here 5552'
-      variant.touch
+      variant.update(updated_at: Time.current + 1.second)
     end
   end
 end
