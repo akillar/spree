@@ -26,8 +26,6 @@ end
 
 gem 'sprockets-rails', '>= 2.0.0'
 
-gem 'spree_multi_vendor'
-
 if ENV['RAILS_VERSION']&.match(/7\.0\.0/) || !ENV['RAILS_VERSION']
   gem 'awesome_nested_set', github: 'damianlegawiec/awesome_nested_set', branch: 'master'
 end
@@ -70,3 +68,5 @@ group :development do
   # gem 'github_fast_changelog'
   gem 'solargraph'
 end
+
+gem 'spree_multi_vendor'
